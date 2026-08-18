@@ -263,6 +263,8 @@
 .heart-beat {
   animation: heart-beat 2.4s ease-in-out infinite;
   will-change: transform;
+  filter: drop-shadow(0 0 26px oklch(0.62 0.22 20 / 0.75))
+    drop-shadow(0 18px 40px oklch(0.3 0.16 10 / 0.6));
 }
 
 @keyframes heart-beat {
@@ -284,12 +286,8 @@
 .heart-shape {
   position: relative;
   transform: rotate(-45deg);
-  background: linear-gradient(150deg, oklch(0.72 0.2 25) 0%, oklch(0.45 0.19 10) 65%, oklch(0.3 0.12 350) 100%);
+  background: oklch(0.52 0.21 19);
   border-radius: 8% 8% 6% 6%;
-  box-shadow:
-    0 0 45px oklch(0.6 0.22 20 / 0.7),
-    inset -6px -10px 26px oklch(0.2 0.08 350 / 0.8),
-    inset 8px 8px 22px oklch(0.85 0.15 30 / 0.35);
 }
 .heart-shape::before,
 .heart-shape::after {
@@ -299,7 +297,6 @@
   height: 100%;
   border-radius: 9999px;
   background: inherit;
-  box-shadow: inherit;
 }
 .heart-shape::before {
   top: -50%;
@@ -312,13 +309,13 @@
 .heart-gloss {
   position: absolute;
   z-index: 2;
-  top: -22%;
-  left: 6%;
-  width: 42%;
-  height: 34%;
+  top: -26%;
+  left: 4%;
+  width: 48%;
+  height: 40%;
   border-radius: 9999px;
-  background: radial-gradient(circle, oklch(1 0 0 / 0.5), transparent 70%);
-  filter: blur(6px);
+  background: radial-gradient(circle at 40% 35%, oklch(1 0 0 / 0.55), transparent 68%);
+  filter: blur(8px);
 }
 
 /* ---------- button ---------- */
