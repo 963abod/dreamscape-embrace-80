@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { story } from "@/config/story";
 
-const drift = [
+const drift: { rotate: number; x: string; delay: number }[] = [
   { rotate: -4, x: "-6%", delay: 0 },
   { rotate: 3, x: "8%", delay: 0.1 },
   { rotate: 5, x: "-4%", delay: 0.2 },
@@ -26,7 +26,7 @@ export function Memories() {
 
       <div className="mx-auto flex max-w-4xl flex-col gap-24 sm:gap-28">
         {story.memories.map((m, i) => {
-          const d = drift[i % drift.length];
+          const d = drift[i % drift.length] ?? { rotate: 0, x: "0%", delay: 0 };
           return (
             <motion.figure
               key={i}
@@ -61,7 +61,7 @@ export function Memories() {
       </div>
 
       <AnimatePresence>
-        {open !== null && (
+        {open !== null && story.memories[open] && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -78,12 +78,12 @@ export function Memories() {
               className="max-h-[85svh] w-full max-w-md"
             >
               <img
-                src={story.memories[open].src}
-                alt={story.memories[open].caption}
+                src={story.memories[open]!.src}
+                alt={story.memories[open]!.caption}
                 className="memory-frame max-h-[70svh] w-full object-contain"
               />
               <figcaption className="mt-4 text-center text-sm text-rose-soft">
-                {story.memories[open].caption}
+                {story.memories[open]!.caption}
               </figcaption>
             </motion.figure>
           </motion.div>
