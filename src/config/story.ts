@@ -21,15 +21,15 @@ export const story = {
   ],
   memoriesTitle: "ذكريات عم تعوم بالفضا",
   memories: [
-    { src: memory1, caption: "أول مرة وقفنا قبال بعض", w: 768, h: 1024 },
+    { src: memory1, caption: "أول مرة حسينا ببعض", w: 768, h: 1024 },
     { src: memory2, caption: "إيد بإيد، وما عاد في خوف", w: 1024, h: 768 },
-    { src: memory3, caption: "ليلة المطر والضوّ الأحمر", w: 768, h: 1024 },
+    { src: memory3, caption: "ليالي المطر الي منحبها", w: 768, h: 1024 },
     { src: memory4, caption: "أصغر تفصيل صار أحلى شي", w: 1024, h: 1024 },
   ],
   timelineTitle: "خط الحكاية",
   timeline: [
     { label: "٢٥ / ٠٨", text: "بداية كل شي" },
-    { label: "أول لقاء", text: "نظرة صارت عادة" },
+    { label: "أول كلمة", text: "نظرة صارت عادة" },
     { label: "أول حديث", text: "حكينا لَحتى نسينا الوقت" },
     { label: "أول ذكرى", text: "صورة صغيرة، قلب كبير" },
     { label: "لحظة خاصة", text: "اللحظة اللي عرفت فيها" },
@@ -39,7 +39,7 @@ export const story = {
     pre: "من يوم تعارفنا...",
     message:
       "من يومها وأنا بشوف الدني أحلى، لأنك صرتي جزء من كل تفصيل فيها. شكراً لأنك إجيتي بالوقت الصح، وضليتي.",
-    closing: "وكل سنة وإنتِ أجمل جزء من حكايتي ❤️",
+    closing: "وكل سنة وإنتِ أجمل جزء من حكايتي بروئتيييي ❤️",
   },
   /** Optional: put a direct .mp3 URL here. If empty, a soft ambient pad is generated. */
   musicUrl: "",
